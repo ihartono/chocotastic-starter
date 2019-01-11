@@ -33,24 +33,30 @@ func ==(lhs: Chocolate, rhs: Chocolate) -> Bool {
 //MARK: - Mmmm...chocolate...
 
 struct Chocolate: Equatable {
+  let id: Int
   let priceInDollars: Float
   let countryName: String
   let countryFlagEmoji: String
   
   // An array of chocolate from europe
   static let ofEurope: [Chocolate] = {
-    let belgian = Chocolate(priceInDollars: 8,
+    let belgian = Chocolate(id: 1,
+                            priceInDollars: 8,
                             countryName: "Belgium",
                             countryFlagEmoji: "🇧🇪")
-    let british = Chocolate(priceInDollars: 7,
+    let british = Chocolate(id: 2,
+                            priceInDollars: 7,
                             countryName: "Great Britain",
                             countryFlagEmoji: "🇬🇧")
-    let dutch = Chocolate(priceInDollars: 8,
+    let dutch = Chocolate(id: 3,
+                          priceInDollars: 8,
                           countryName: "The Netherlands",
                           countryFlagEmoji: "🇳🇱")
-    let german = Chocolate(priceInDollars: 7,
+    let german = Chocolate(id: 4,
+                           priceInDollars: 7,
                            countryName: "Germany", countryFlagEmoji: "🇩🇪")
-    let swiss = Chocolate(priceInDollars: 10,
+    let swiss = Chocolate(id: 5,
+                          priceInDollars: 10,
                           countryName: "Switzerland",
                           countryFlagEmoji: "🇨🇭")
     

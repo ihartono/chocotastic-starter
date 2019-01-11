@@ -23,12 +23,16 @@
 import Foundation
 import RxSwift
 
+struct Cart: Equatable {
+  let productId: Int
+  let qty: Int
+}
+
 class ShoppingCart {
   
   static let sharedCart = ShoppingCart()
   
   let chocolates: Variable<[Chocolate]> = Variable([])
-
   
   //MARK: Non-Mutating Functions
   
@@ -63,6 +67,16 @@ class ShoppingCart {
     }
     
     return itemStrings.joined(separator: "\n")
+  }
+  
+  func addToCart(id: Int, qty: Int) -> [Observable<[Int]>] {
+    let a = Cart(
+      productId: id,
+      qty: qty
+    )
+    
+    //return a
+    return []
   }
   
 }
